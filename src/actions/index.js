@@ -4,3 +4,9 @@ export const addTodo = text => ({
     text
 })
 
+export const TOGGLE_TODO = 'TOGGLE_TODO'
+export const toggleTodo = todoId => ({
+    type: TOGGLE_TODO,
+    todoId
+})
+

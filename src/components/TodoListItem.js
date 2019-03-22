@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
-const TodoListItem = ({ todo }) => (
-    <TouchableOpacity onPress={() => {}}>
+const TodoListItem = ({ todo, onPressTodo }) => (
+    <TouchableOpacity onPress={onPressTodo}>
         <View style={styles.line}>
             <Text style={styles.lineText}>
                 { todo.text }
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     lineText: {
-        fontSize: 20,
+        fontSize: 18,
         paddingLeft: 15,
         flex: 7
 
