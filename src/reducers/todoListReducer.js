@@ -1,10 +1,13 @@
 import { ADD_TODO } from '../actions'
 
-const TodoListReducer = (state = [], action) => {
+let nextId = 1
+
+const todoListReducer = (state = [], action) => {
     switch (action.type) {
         case ADD_TODO:
         console.log('addTodo foi chamado!!', action.text)
             const newTodo = {
+                id: nextId++,
                 text: action.text
             }
             return [...state, newTodo]
@@ -13,4 +16,4 @@ const TodoListReducer = (state = [], action) => {
     }
 }
 
-export default TodoListReducer
+export default todoListReducer
