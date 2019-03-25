@@ -12,8 +12,8 @@ class TodoForm extends React.Component {
     }
 
     onPress() {
-        this.props.dispatchAddTodo(this.state.text)
-        this.setState({ text: '' })
+        const { text }  = this.props.todo
+        this.props.dispatchAddTodo(text)
     }
 
     render() {
